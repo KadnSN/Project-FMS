@@ -1,0 +1,76 @@
+function setup() { 
+  createCanvas(600, 500);
+  homeScreen();
+}
+
+function mainButtons() {
+  let button = createButton("Home");
+  button.style('background-color', 'white');
+  button.style('black');
+  button.position(500,0);
+  button.size(100,50);
+  button.mousePressed(mainMenu);
+  
+  let button2 = createButton("Levels");
+  button2.style('background-color', 'white');
+  button2.style('black');
+  button2.position(410,0);
+  button2.size(100,50);
+  button2.mousePressed();
+}
+
+function levelButtons() {
+  let button3 = createButton("Level 1 Easy (45s)");
+  button3.style('background-color', 'white');
+  button3.style('black');
+  button3.position(380,200);
+  button3.size(200,50);
+  button3.mousePressed(level_1);
+  
+  let button4 = createButton("Level 2 Medium (30s)");
+  button4.style('background-color', 'white');
+  button4.style('black');
+  button4.position(380,300);
+  button4.size(200,50);
+  button4.mousePressed(level_2);
+  
+  let button5 = createButton("Level 3 Hard (15s)");
+  button5.style('background-color', 'white');
+  button5.style('black');
+  button5.position(380,400);
+  button5.size(200,50);
+  button5.mousePressed(level_3);
+}
+
+function homeScreen() {
+  background('#D5A4EB');
+  //Title
+  textSize(60);
+  fill('white');
+  strokeWeight('3');
+  stroke('black');
+  textFont('Times', 60);
+  text("Typing Game", 130, 115);
+  mainButtons();
+  levelButtons();
+  
+  fill('white')
+  strokeWeight('2')
+  stroke('black')
+  textSize(25)
+  text(" Directions:\n Type the corresponding letter\n displayed on screen on your\n keyboard to gain a point. Goal is\n to accumilate score. There are 3\n levels seperated by 3 time\n contraints. Press a level to begin\n playing :)", 15, 240)
+}
+
+function mainMenu() { window.open("https://editor.p5js.org/bejacks5/full/gCYhLWBBZ")
+}
+
+function level_1() { window.open("https://editor.p5js.org/kneal12/full/8IIoC2YEW")
+}
+
+function level_2() {         window.open("https://editor.p5js.org/kneal12/full/wQ7Lnt6oO")
+}
+
+function level_3() { window.open("https://editor.p5js.org/kneal12/full/FdbluCPCF")
+}
+
+
